@@ -1,0 +1,409 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #f1f1f1;
+  background: #181a1b;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.navbar {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00bcd4 !important;
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://thumbs.dreamstime.com/b/serious-indian-business-man-working-studying-laptop-computer-young-professional-focused-ethnic-male-student-wearing-glasses-214010622.jpg') center/cover;
+  opacity: 0.18;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#hero .lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-buttons .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-primary {
+  background: #00bcd4;
+  border: none;
+}
+
+.hero-buttons .btn-outline-light {
+  border-color: #00bcd4;
+  color: #00bcd4;
+}
+
+.hero-buttons .btn-outline-light:hover {
+  background: #00bcd4;
+  color: #181a1b;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(0,188,212,0.08);
+  color: #00bcd4;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: #00bcd4;
+  color: #181a1b;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-link i {
+  font-size: 1.2rem;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #00bcd4;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00bcd4, #232526);
+  border-radius: 2px;
+}
+
+/* About Section */
+#about {
+  background: #232526;
+}
+
+.about-image {
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 300px;
+  border: 8px solid #232526;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Skills Section */
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+}
+
+.progress {
+  height: 8px;
+  background: #414345;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #00bcd4, #232526);
+  transition: width 1s ease;
+}
+
+/* Projects Section */
+#projects {
+  background: #232526;
+}
+
+.project-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #181a1b;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.project-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.project-tech {
+  margin-top: 1rem;
+}
+
+.project-tech .badge {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  background: #232526;
+  color: #00bcd4;
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  background: #232526;
+  color: #f1f1f1;
+}
+
+.modal-header {
+  border-bottom: 1px solid #414345;
+  padding: 1.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+}
+
+.project-links .btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+/* Contact Section */
+#contact {
+  background: #232526;
+}
+
+.contact-form {
+  background: #181a1b;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.form-control {
+  border: 2px solid #414345;
+  border-radius: 10px;
+  padding: 12px 15px;
+  background: #232526;
+  color: #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 0.2rem rgba(0,188,212,0.15);
+  background: #232526;
+  color: #fff;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #f1f1f1;
+}
+
+footer .social-links {
+  justify-content: flex-end;
+}
+
+footer .social-link {
+  background: rgba(0,188,212,0.08);
+  width: 40px;
+  height: 40px;
+  color: #00bcd4;
+}
+
+footer .social-link:hover {
+  background: #00bcd4;
+  color: #181a1b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  #hero .lead {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons .btn {
+    display: block;
+    margin: 0.5rem auto;
+    max-width: 200px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .about-image img {
+    max-width: 200px;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  footer .social-links {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .project-card .card-img-top {
+    height: 150px;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #232526, #00bcd4);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
